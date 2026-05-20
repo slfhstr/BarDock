@@ -46,6 +46,35 @@ build/BarDock.app
 open build/BarDock.app
 ```
 
+## Signed Release
+
+For distribution outside the Mac App Store, BarDock should be signed with a
+Developer ID Application certificate and notarized by Apple.
+
+Check for a local Developer ID certificate:
+
+```sh
+security find-identity -v -p codesigning
+```
+
+Store notarization credentials once:
+
+```sh
+APPLE_ID="you@example.com" TEAM_ID="ABCDE12345" ./scripts/store-notary-credentials.sh
+```
+
+Build, sign, notarize, staple, and package:
+
+```sh
+./scripts/release.sh
+```
+
+The notarized zip is written to:
+
+```text
+build/BarDock-1.0.0.zip
+```
+
 ## Notes
 
 - BarDock is a native AppKit app.
