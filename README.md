@@ -10,6 +10,8 @@ Version: 1.0.0
 
 Copyright (c) First Option Limited 2026
 
+License: MIT
+
 ## GitHub About
 
 Always-visible macOS app switcher that lives under the menu bar and lets power users jump to running apps across Spaces, Stage Manager, and displays.
@@ -39,3 +41,4 @@ open build/BarDock.app
 - It runs as a menu-bar utility app, so it does not appear in the Dock.
 - The strip is placed below the menu bar on the current main screen and joins all Spaces.
 - The app icon is generated from `scripts/GenerateAppIcon.swift` and stored in `Resources/AppIcon.icns`.
+- BarDock is released under the MIT License.
