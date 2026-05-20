@@ -16,6 +16,16 @@ License: MIT
 
 Always-visible macOS app switcher that lives under the menu bar and lets power users jump to running apps across Spaces, Stage Manager, and displays.
 
+## Mac Quarantine
+
+App is unsigned currently, so on installation you need to run :
+
+`xattr -dr com.apple.quarantine /path/to/BarDock.app`
+
+## Screenshot
+
+![Screenshot](Screenshot.png)
+ 
 ## Build
 
 ```sh
