@@ -18,8 +18,9 @@ Always-visible macOS app switcher that lives under the menu bar and lets power u
 
 ## Mac Quarantine
 
-App is unsigned currently, so on installation you need to run :
+App has been signed, so should install / start cleanly.
 
+If you get a warning, you need to run :
 `xattr -dr com.apple.quarantine /path/to/BarDock.app`
 
 ## Screenshot
@@ -44,35 +45,6 @@ build/BarDock.app
 
 ```sh
 open build/BarDock.app
-```
-
-## Signed Release
-
-For distribution outside the Mac App Store, BarDock should be signed with a
-Developer ID Application certificate and notarized by Apple.
-
-Check for a local Developer ID certificate:
-
-```sh
-security find-identity -v -p codesigning
-```
-
-Store notarization credentials once:
-
-```sh
-APPLE_ID="you@example.com" TEAM_ID="ABCDE12345" ./scripts/store-notary-credentials.sh
-```
-
-Build, sign, notarize, staple, and package:
-
-```sh
-./scripts/release.sh
-```
-
-The notarized zip is written to:
-
-```text
-build/BarDock-1.0.0.zip
 ```
 
 ## Notes
