@@ -24,6 +24,8 @@ App is unsigned currently, so on installation you need to run :
 
 ## Screenshot
 
+![BarDock panel](BarDock-pane.png)
+
 ![Screenshot](Screenshot.png)
  
 ## Build
