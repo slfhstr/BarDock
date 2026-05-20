@@ -369,12 +369,12 @@ private final class HoverTooltipController {
         let contentView = NSView()
         contentView.wantsLayer = true
         contentView.layer?.cornerRadius = 6
-        contentView.layer?.backgroundColor = NSColor.controlBackgroundColor.withAlphaComponent(0.96).cgColor
+        contentView.layer?.backgroundColor = NSColor(calibratedWhite: 0.10, alpha: 0.96).cgColor
         contentView.layer?.borderWidth = 1
-        contentView.layer?.borderColor = NSColor.separatorColor.withAlphaComponent(0.7).cgColor
+        contentView.layer?.borderColor = NSColor(calibratedWhite: 1.0, alpha: 0.20).cgColor
 
         label.font = .systemFont(ofSize: 12, weight: .medium)
-        label.textColor = .labelColor
+        label.textColor = NSColor(calibratedWhite: 1.0, alpha: 0.94)
         label.alignment = .center
         label.lineBreakMode = .byTruncatingTail
         label.translatesAutoresizingMaskIntoConstraints = false
